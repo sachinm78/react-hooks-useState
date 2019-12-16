@@ -16,6 +16,8 @@ function App() {
         setContactsData(prevContacts => [...prevContacts, inputData])
     }
     
+    const contacts = contactsData.map(contact => <h2 key={contact.firstName + contact.lastName}>{contact.firstName} {contact.lastName}</h2>)
+
     return (
         <>
             <form onSubmit={handleSubmit}>
@@ -34,7 +36,7 @@ function App() {
                 <br />
                 <button>Add contact</button>
             </form>
-            {/*{contacts}*/}
+            {contacts}
         </>
     )
 }
