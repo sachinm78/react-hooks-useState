@@ -1,20 +1,31 @@
-import React from "react"
+import React, { useState } from "react"
 
-class App extends React.Component {
-    constructor() {
-        super()
-        this.state = {
-            answer: "Yes"
-        }
-    }
+function App() {
+    const value = useState("Yes")
+    console.log(value)
     
-    render() {
-        return (
-            <div>
-                <h1>Is state important to know? {this.state.answer}</h1>
-            </div>
-        )
-    }
+    return (
+        <div>
+            <h1>Is state important to know? Yes</h1>
+        </div>
+    )
 }
+
+// class App extends React.Component {
+//     constructor() {
+//         super()
+//         this.state = {
+//             answer: "Yes"
+//         }
+//     }
+    
+//     render() {
+//         return (
+//             <div>
+//                 <h1>Is state important to know? {this.state.answer}</h1>
+//             </div>
+//         )
+//     }
+// }
 
 export default App
