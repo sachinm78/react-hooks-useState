@@ -5,11 +5,13 @@ function App() {
     const [contactsData, setContactsData] = useState([])
     
     function handleChange(event) {
-        
+        // update our inputData state
+        const {name, value} = event.target
+        setInputData(prevInputData => ({...prevInputData, [name]: value}))
     }
     
     function handleSubmit(event) {
-        
+        // add the inputData to the contactsData array
     }
     
     return (
