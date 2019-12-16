@@ -12,6 +12,8 @@ function App() {
     
     function handleSubmit(event) {
         // add the inputData to the contactsData array
+        event.preventDefault()
+        setContactsData(prevContacts => [...prevContacts, inputData])
     }
     
     return (
