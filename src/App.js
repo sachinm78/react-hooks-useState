@@ -1,12 +1,10 @@
-import React, { useState } from "react"
+import React, {useState} from "react"
 
 function App() {
-    const value = useState("Yes")
-    console.log(value)
-    
+    const [answer] = useState("Yes")
     return (
         <div>
-            <h1>Is state important to know? Yes</h1>
+            <h1>Is state important to know? {answer}</h1>
         </div>
     )
 }
